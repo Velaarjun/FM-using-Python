@@ -26,31 +26,34 @@ Algorithm
 5.	Generate FM Signal: Apply the FM modulation formula to obtain the modulated signal.
 6.	Plot the Signals: Use Matplotlib to plot the message signal, carrier signal, and modulated signal.
 
-Program
-import numpy as np
-import matplotlib.pyplot as plt
-Am=4.3
-fm=354
-Ac=8.6
-fc=3540
-fs=35400
-b=5.6
-t=np.arange(0,2/fm,1/fs)
-m = np.cos(2 * np.pi * fm * t)
-c=np.cos(2*np.pi*fc*t)
-s = np.cos(2 * np.pi * fc * t + b * np.cos(2 * np.pi * fm * t))
+## **Program**
+```
+import numpy as np    
+import matplotlib.pyplot as plt    
+Am=4.4    
+fm=364   
+Ac=8.8    
+fc=3640   
+fs=36400    
+b=5.7     
+t=np.arange(0,2/fm,1/fs)    
+m = np.cos(2 * np.pi * fm * t)    
+c=np.cos(2*np.pi*fc*t)    
+s = np.cos(2 * np.pi * fc * t + b * np.cos(2 * np.pi * fm * t))    
 
-plt.subplot(3,1,1)
-plt.plot(t, m)
+plt.subplot(3,1,1)     
+plt.plot(t, m)     
 
-plt.subplot(3,1,2)
-plt.plot(t,c)
+plt.subplot(3,1,2)    
+plt.plot(t,c)     
 
-plt.subplot(3,1,3)
+plt.subplot(3,1,3)      
 plt.plot(t,s)
 
-Output Waveform
-<img width="1918" height="1084" alt="Screenshot 2025-09-10 194043" src="https://github.com/user-attachments/assets/56cb20ac-6aa8-460f-899c-34a12b983f30" />
+```   
+
+Output Waveform    
+<img width="676" height="514" alt="image" src="https://github.com/user-attachments/assets/18809402-3e13-47ff-99d3-7887b7895675" />
 
 
 Tabular Column
@@ -63,6 +66,8 @@ Calculation
 
 
 Result
+
+The message signal, carrier signal, and frequency modulated (FM) signal will be displayed in separate plots. The modulated signal will show frequency variations corresponding to the amplitude of the message signal.
 
 
 The message signal, carrier signal, and frequency modulated (FM) signal will be displayed in separate plots. The modulated signal will show frequency variations corresponding to the amplitude of the message signal.
